@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: montserrat, sans-serif;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+        "title title"
+        "menu  menu"
+        "main  main"
+        "foot  foot"; 
+}
+
+/* --- lay out --- */
+
+.header {
+  grid-area: title;
+} 
+
+.main {
+  grid-area: main;
+}
+
+#menu {
+  grid-area: menu;
+}
+
+.foot {
+  grid-area: foot;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*--- styles ---- */
+
+.header, .main, .foot {
+  padding: 20px;
+}
+
+#menu {
+  background-color: #F0EDED;
+}
+
+.header img {
+  width: 60px;
+}
+
+.main {
+  background-color: #fff;
+}
+
+body {
+  margin-bottom: 40px;
+}
+
+p {
+  line-height: 25px;
+}
+
+/* --- navigatie ---- */
+
+nav ul {
+  display: flex;
+  flex-flow: column ;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  flex-grow: 1;
+  display: flex;
+  padding: 10px;
+  margin: 8px;
+  list-style: none;
+}
+
+nav ul li:hover {
+  background-color: #fff;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.menutoggle {
+  margin-left: auto;
+}
+
+.menutoggle a {
+  color: grey;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.inactive {
+  max-height: 0px;
+  transition: max-height 0.6s;
+}
+
+.active {
+  max-height: 400px;
+  transition: max-height 0.6s;
+}
+
+
+/*---- project ----*/
+
+.intro img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#slider img {
+  display: block;
+  margin: 0 auto;
+}
+
+/*-- blokken -- */
+
+.blokken div {
+  background-color: #FCE6DB;
+  padding: 15px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.blok1 {
+  margin-top: 20px;
+}
+
+.info {
+  margin-bottom: 30px;
+}
+
+.proces {
+}
+
+.proces div {
+  padding: 20px;
+  background-color: #F0EDED;
+  margin-bottom: 10px;
+}
+
+.proces h3 {
+  text-align: center;
+}
+
+.proces img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  margin-top: 30px;
+}
+
+#fotos img {
+  width: 89%;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #F0EDED;
+  margin: 10px;
+  align-items: center;
+}
+
+#fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+
+}
+/*--- overig ----*/
+
+.intro p {
+  text-align: left;
+}
+
+.button {
+  margin-right: auto;
+  margin-left: auto; 
+  display: block;
+  background-color: #fff;
+  font-family: calibri; 
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  background-color: #E1CDC6;
+  transform: translateY(-3px);
+}
+
+/*----- project ---- */
+
+
+/*---- footer -----*/ 
+
+.foot {
+  background-color: #F0EDED;
+  display: block;
+  margin: 20px;
+}
+
+.foot span {
+  font-weight: bold;
+  text-align: left;
+}
+
+.contact-form input, textarea {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+}
+
+.navigatie {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.navigatie a {
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  font-size: 12px;
+}
+
+.foot a:hover {
+  color: grey;
+  font-weight: bold;
+}
+
+.foot h2 {
+  text-align: center;
+  margin-bottom: -35px;
+}
+
+.socials img {
+ display: block;
+ margin: 0 auto;
+ width: 30px;
+ margin-top: 20px;
+}
+
+/*---- media queries ---- */
+
+/*---- 780 ----*/
+
+@media only screen and (min-width: 780px){
+
+body, .main, .foot {
+    margin: 0 20px 20px 15px;
+}
+
+.form {
+  margin-left: 35%;
+}
+
+.form input, textarea {
+  width: 50%;
+}
+
+.formButton {
+  width: 100%;
+}
+
+/*---- 850 ---- */
+
+@media only screen and (min-width: 850px){ 
+
+.blokken { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+}
+
+.blokken div {
+  margin-right: 8px;
+}
+
+.blok1 {
+  margin-top: 0px;
+}
+
+.proces img {
+  width: 60%;
+}
+
+#fotos img {
+  width: 60%;
+  margin-left: 20%;
+
+}
+
+}
+
+/*---- 1024 ---- */
+
+@media only screen and (min-width: 1024px){
+
+body{
+    grid-template-areas: 
+    "title menu"
+    "main  main"
+    "foot  foot"; 
+}
+
+body, .main, .foot, .main, .header img {
+  padding: 0 60px 40px 60px;
+}
+
+.header img {
+  padding-top: 20px;
+}
+
+nav ul li {
+    padding-top: 3em;
+}
+
+nav ul {
+    flex-flow: row;
+}
+
+nav ul li:hover {
+  color: grey;
+}
+
+#menu {
+  background-color: #fff;
+  margin-left: auto;
+  padding-right: 60px;
+}
+
+.menutoggle{
+     display: none;
+}
+
+.inactive {
+    max-height: 400px;
+}
+
+.proces img {
+  width: 40%;
+}
+
+#fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 30px;
+}
+
+#fotos img {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.intro img {
+  margin-top: 70px;
+}
+
+.foot h2 {
+  margin-top: 40px;
+}
+
+}

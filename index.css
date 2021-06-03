@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: montserrat, sans-serif;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+        "title title"
+        "menu  menu"
+        "main  main"
+        "foot  foot"; 
+}
+
+/* --- lay out --- */
+
+.header {
+  grid-area: title;
+} 
+
+.main {
+  grid-area: main;
+}
+
+#menu {
+  grid-area: menu;
+}
+
+.foot {
+  grid-area: foot;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*--- styles ---- */
+
+.header, .main, .foot {
+  padding: 20px;
+}
+
+#menu {
+  background-color: #F0EDED;
+}
+
+.main {
+  background-color: #fff;
+}
+
+.header img {
+  width: 60px;
+}
+
+body {
+  margin-bottom: 40px;
+}
+
+#tekst {
+  display: none;
+}
+
+/* --- navigatie ---- */
+
+header img {
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column ;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  flex-grow: 1;
+  display: flex;
+  padding: 10px;
+  margin: 8px;
+  list-style: none;
+}
+
+nav ul li:hover {
+  background-color: #fff;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.menutoggle {
+  margin-left: auto;
+}
+
+.menutoggle a {
+  color: grey;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.inactive {
+  max-height: 0px;
+  transition: max-height 0.6s;
+}
+.active {
+  max-height: 400px;
+  transition: max-height 0.6s;
+}
+
+/*---- intro -----*/
+
+.intro p {
+  margin-top: -10px;
+}
+
+.profiel img {
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto; 
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.button {
+  margin-right: auto;
+  margin-left: auto; 
+  display: block;
+  background-color: #fff;
+  font-family: calibri; 
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #E1CDC6;
+  transform: translateY(-3px);
+}
+
+/*----- projecten ------ */
+
+.project-container div {
+  background-color: #F0EDED; 
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.project-container div:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-container div a {
+  color: black; 
+  text-decoration: none;
+}
+
+.project-container img {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.wewo h3, .correct h3, .buurtsuper h3 {
+  text-align: center;
+}
+
+.buurtsuper {
+  margin-bottom: 70px;
+}
+
+
+/*-------- portfolio ----------*/
+
+.portfolio {
+
+}
+
+#introTekst {
+}
+
+/*-------- footer ----------*/
+
+.foot {
+  background-color: #F0EDED;
+  display: block;
+  margin: 20px;
+}
+
+.foot span {
+  font-weight: bold;
+}
+
+.navigatie {
+  margin-top: 0px;
+}
+
+.contact-form input, textarea {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+}
+
+.navigatie {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.navigatie a {
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  font-size: 12px;
+}
+
+.foot a:hover {
+  color: grey;
+  font-weight: bold;
+}
+
+.foot h2 {
+  text-align: center;
+  margin-bottom: -35px;
+}
+
+.socials img {
+ display: block;
+ margin: 0 auto;
+ width: 30px;
+ margin-top: 20px;
+}
+
+
+/* --- media queries --- */
+
+/*---- 612 ---- */
+
+@media only screen and (min-width: 612px){
+
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+.project-container div {
+ margin: 5px;
+}
+
+/*---- 780 ---- */
+
+
+@media only screen and (min-width: 780px){
+
+.navigatie {
+  margin-top: -20px;
+}
+
+body, .main, .foot, .header {
+    margin: 0 20px 20px 15px;
+}
+
+/*---- 1024 ---- */
+
+@media only screen and (min-width: 1024px){
+  body{
+    grid-template-areas: 
+    "title menu"
+    "main  main"
+    "foot  foot"; 
+  }
+
+body, .main, .foot, .main, .header img {
+  padding: 0 60px 40px 60px;
+}
+
+.header img {
+  padding-top: 20px;
+}
+
+.main {
+  padding-bottom: 0px;
+}
+
+.portfolio {
+  padding-top: 0px;
+}
+
+nav ul li {
+  padding-top: 3em;
+}
+
+nav ul {
+  flex-flow: row;
+}
+
+nav ul li:hover {
+  color: grey;
+}
+
+#menu {
+  background-color: #fff;
+  margin-left: auto;
+  padding-right: 60px;
+}
+
+.menutoggle {
+  display: none;
+}
+
+.inactive {
+  max-height: 400px;
+}
+
+.flex {
+  display: flex;
+  margin-left: 10%;
+}
+
+.intro {
+  margin-right: 70px;
+  padding-top: 60px;
+}
+
+.profiel button {
+  display: none;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project-container img {
+  width: 100%;
+}
+
+.portfolio {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.foot h2 {
+  margin-top: 40px;
+}
+
+}
+
+/*---- 1150 ----*/
+
+@media only screen and (min-width: 1150px){
+
+.flex {
+  display: flex;
+  margin-left: 20%;
+}
+
+}
